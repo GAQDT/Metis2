@@ -1,0 +1,425 @@
+Module: GPTModel
+  Submodule: embedding (LanguageModelEmbedding)
+    Module: LanguageModelEmbedding
+      Submodule: word_embeddings (VocabParallelEmbedding)
+        Module: VocabParallelEmbedding
+      Submodule: position_embeddings (Embedding)
+        Module: Embedding
+      Submodule: embedding_dropout (Dropout)
+        Module: Dropout
+  Submodule: decoder (TransformerBlock)
+    Module: TransformerBlock
+      Submodule: layers (ModuleList)
+        Module: ModuleList
+          Submodule: 0 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 1 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 2 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 3 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 4 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 5 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 6 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 7 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 8 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 9 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 10 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+          Submodule: 11 (TransformerLayer)
+            Module: TransformerLayer
+              Submodule: input_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: self_attention (SelfAttention)
+                Module: SelfAttention
+                  Submodule: core_attention (DotProductAttention)
+                    Module: DotProductAttention
+                      Submodule: scale_mask_softmax (FusedScaleMaskSoftmax)
+                        Module: FusedScaleMaskSoftmax
+                      Submodule: attention_dropout (Dropout)
+                        Module: Dropout
+                  Submodule: linear_proj (RowParallelLinear)
+                    Module: RowParallelLinear
+                  Submodule: linear_qkv (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: q_layernorm (IdentityOp)
+                    Module: IdentityOp
+                  Submodule: k_layernorm (IdentityOp)
+                    Module: IdentityOp
+              Submodule: pre_cross_attn_layernorm (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attention (IdentityOp)
+                Module: IdentityOp
+              Submodule: cross_attn_bda (IdentityFuncOp)
+                Module: IdentityFuncOp
+              Submodule: pre_mlp_layernorm (FusedLayerNorm)
+                Module: FusedLayerNorm
+              Submodule: mlp (MLP)
+                Module: MLP
+                  Submodule: linear_fc1 (ColumnParallelLinear)
+                    Module: ColumnParallelLinear
+                  Submodule: linear_fc2 (RowParallelLinear)
+                    Module: RowParallelLinear
+      Submodule: final_layernorm (FusedLayerNorm)
+        Module: FusedLayerNorm
+  Submodule: output_layer (ColumnParallelLinear)
+    Module: ColumnParallelLinear
